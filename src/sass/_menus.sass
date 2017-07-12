@@ -1,0 +1,72 @@
+.menus-container,
+.menus
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  z-index: 20
+
+.menus-container
+  height: calc(100% - (#{$menusY})
+  margin-top: $menusY
+
+.menus
+  margin-top: $menusY
+  // margin-left: 4vw
+
+.menu-primary
+  display: inline-block
+  flex: 0 1 auto
+  line-height: 2
+  margin: 0 4em 0 0
+  position: relative
+  z-index: 6
+
+  li
+    opacity: 0
+    will-change: transform, opacity
+  a
+    display: inline-block
+    transition: all 0.45s $defaultEasing
+    position: relative
+    // yellow bar on hover & active
+    &:before
+      content: ''
+      background: $yellow
+      display: inline-block
+      position: absolute
+      left: -18px
+      top: 15px
+      width: 0
+      height: 3px
+      opacity: 0
+      transition: all $defaultTiming $defaultEasing
+
+  a:hover,
+  a.active
+    font-weight: 600
+    transform: translateX($gutter) scale(1.08)
+    &:before
+      opacity: 1
+      width: 10px
+
+.menu-secondary
+  display: inline-block
+  flex: 1 1 0
+  line-height: 2.4
+  margin-top: -3px
+  margin-right: 5em
+  position: relative
+  z-index: 6
+  li
+    opacity: 0
+    will-change: transform, opacity
+    a
+      color: $grey-light
+      display: inline-block
+      font-size: 0.75em
+      text-transform: uppercase
+      transition: all 0.35s $defaultEasing
+    a:hover,
+    a.active
+      color: $link
+      transform: translateX($gutter/4)
