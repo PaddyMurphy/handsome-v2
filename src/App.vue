@@ -89,7 +89,7 @@
     <!-- white background that's animated -->
     <div class="nav-content"></div>
 
-    <div class="content">
+    <div class="content" style="background-image: url('./img/bugaboo-spire.jpg')">
       <!-- homepage content -->
       <div class="tagline">
         <h1>Foster the Next Generation. Give Today to Reach Tomorrow.</h1>
