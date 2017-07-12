@@ -33,15 +33,17 @@ body
   opacity: 1
 
 .logo
-  background-size: 265px 29px;
+  background-image: url('./img/logo-2x.png')
+  background-size: 265px 29px
   position: absolute
   z-index: 99
   width: 265px
   height: 29px
-  top: 0
+  top: 32px
   left: 0
   right: 0
   margin: 0 auto
+
 
 // Menu link
 .menu-link
@@ -52,7 +54,7 @@ body
   text-transform: none
   position: absolute
   font-size: 14px
-  top: 30px
+  top: 37px
   left: $contentGap
   transition: color 100ms $defaultEasing
   z-index: 9999 // always on top
@@ -110,7 +112,7 @@ button
   z-index: 5
 
 .content
-  // background-image set in App.vue
+  background-image: url('./img/bugaboo-spire.jpg')
   background-position: top center
   background-repeat: no-repeat
   background-size: cover
@@ -158,23 +160,3 @@ a
   position: absolute !important
   top: -9999px !important
   left: -9999px !important
-
-.github-icon
-  align-items: center
-  bottom: 2em
-  display: inline-flex
-  fill: white
-  height: 1.5rem
-  justify-content: center
-  left: $contentGap
-  position: absolute
-  transition: fill $defaultEasing 200ms
-  width: 1.5rem
-  z-index: 30
-  svg
-    transition: fill $defaultEasing 200ms
-    &:hover
-      fill: #438CFD
-
-.open .github-icon
-  fill: black
